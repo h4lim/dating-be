@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"golang.org/x/crypto/argon2"
+	"regexp"
 	"runtime"
 	"strconv"
 	"strings"
@@ -126,6 +127,17 @@ func VerifyPassword(password, encodedHash string) (bool, error) {
 	computedHash := argon2.IDKey([]byte(password), salt, 1, 64*1024, 4, 32)
 
 	return sha256.Sum256(computedHash) == sha256.Sum256(expectedHash), nil
+}
+
+func IsValidEmail(email string) bool {
+	// Regular expression for a valid email
+	const emailRegex = `^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$`
+
+	// Compile the regex
+	re := regexp.MustCompile(emailRegex)
+
+	// Match the email against the regex
+	return re.MatchString(email)
 }
 
 func split(s, sep string) []string {

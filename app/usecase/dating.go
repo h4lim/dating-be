@@ -24,6 +24,12 @@ func NewDatingUseCase(response common.Response) contract.IDatingUseCase {
 
 func (i iDatingUseCaseContext) Signup(request types.RequestSignup) common.Response {
 
+	isValidEmail := common.IsValidEmail(request.Email)
+	if !isValidEmail {
+		newError := errors.New("invalid email format")
+		return helper.BadRequest(i.response, common.Tracer(), newError, "10")
+	}
+
 	if request.Password != request.ConfirmPassword {
 		newError := errors.New("invalid confirm password")
 		return helper.BadRequest(i.response, common.Tracer(), newError, "01")

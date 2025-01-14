@@ -9,7 +9,8 @@
     "06": "Swipe limit quota exceeded",
     "07": "Invalid token format",
     "08": "Token expired",
-    "09": "Profile already viewed like or pass"
+    "09": "Profile already viewed like or pass",
+    "10": "Invalid email format"
   },
   "id": {
     "0": "Berhasil",
@@ -19,6 +20,7 @@
     "04": "Invalid Password",
     "05": "Invalid Request",
     "06": "Swipe limit quota exceeded",
-    "09": "Profile already like or pass"
+    "09": "Profile already like or pass",
+    "10": "Invalid email format"
   }
 }
