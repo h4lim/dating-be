@@ -1,0 +1,24 @@
+{
+  "en": {
+    "0": "Success",
+    "01": "Confirm password not matched",
+    "02": "Username or email already taken",
+    "03": "User not found",
+    "04": "Invalid Password",
+    "05": "Invalid Request",
+    "06": "Swipe limit quota exceeded",
+    "07": "Invalid token format",
+    "08": "Token expired",
+    "09": "Profile already viewed like or pass"
+  },
+  "id": {
+    "0": "Berhasil",
+    "01": "Konfirmasi password salah",
+    "02": "Username or email already taken",
+    "03": "User not found",
+    "04": "Invalid Password",
+    "05": "Invalid Request",
+    "06": "Swipe limit quota exceeded",
+    "09": "Profile already like or pass"
+  }
+}

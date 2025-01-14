@@ -1,0 +1,213 @@
+definitions:
+  common.GinResponse:
+    properties:
+      code:
+        type: string
+      message:
+        type: string
+      traceId:
+        type: string
+    type: object
+  types.RequestLogin:
+    properties:
+      password:
+        type: string
+      username:
+        type: string
+    type: object
+  types.RequestSignup:
+    properties:
+      age:
+        type: integer
+      confirm_password:
+        type: string
+      email:
+        type: string
+      full_name:
+        type: string
+      gender:
+        type: string
+      password:
+        type: string
+      username:
+        type: string
+    type: object
+  types.RequestSwipe:
+    properties:
+      is_first_view:
+        type: boolean
+      profile_id:
+        type: integer
+      right_swipe:
+        type: boolean
+      username:
+        type: string
+    type: object
+  types.ResponseLogin:
+    properties:
+      expired:
+        type: integer
+      token:
+        type: string
+      type:
+        type: string
+      user_id:
+        type: integer
+      username:
+        type: string
+    type: object
+  types.ResponseSwipe:
+    properties:
+      age:
+        type: integer
+      email:
+        type: string
+      full_name:
+        type: string
+      gender:
+        type: string
+      premium_package:
+        type: string
+      profile_id:
+        type: integer
+      username:
+        type: string
+    type: object
+info:
+  contact:
+    email: support@swagger.io
+    name: API Support
+    url: http://www.swagger.io/support
+  description: Api swagger collection for DATING APPS API.
+  license:
+    name: Abdul Halim
+    url: https://github.com/h4lim
+  title: DATING APPS API
+  version: "1.0"
+paths:
+  /login:
+    post:
+      description: Login API.
+      parameters:
+      - default: application/json
+        description: Must application/json
+        in: header
+        name: Content-Type
+        required: true
+        type: string
+      - default: EN
+        description: Must be EN or ID
+        in: header
+        name: Accept-Language
+        type: string
+      - description: Request Body
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/types.RequestLogin'
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/common.GinResponse'
+            - properties:
+                data:
+                  $ref: '#/definitions/types.ResponseLogin'
+              type: object
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/common.GinResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/common.GinResponse'
+      summary: Login API
+      tags:
+      - Dating Apps API
+  /signup:
+    post:
+      description: Signup API.
+      parameters:
+      - default: application/json
+        description: Must application/json
+        in: header
+        name: Content-Type
+        required: true
+        type: string
+      - default: EN
+        description: Must be EN or ID
+        in: header
+        name: Accept-Language
+        type: string
+      - description: Request Body
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/types.RequestSignup'
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/common.GinResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/common.GinResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/common.GinResponse'
+      summary: Signup API
+      tags:
+      - Dating Apps API
+  /swipe:
+    post:
+      description: Swipe API.
+      parameters:
+      - description: Token get from login
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - default: application/json
+        description: Must application/json
+        in: header
+        name: Content-Type
+        required: true
+        type: string
+      - default: EN
+        description: Must be EN or ID
+        in: header
+        name: Accept-Language
+        type: string
+      - description: Request Body
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/types.RequestSwipe'
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/common.GinResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/common.GinResponse'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/common.GinResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/common.GinResponse'
+      summary: Swipe API
+      tags:
+      - Dating Apps API
+swagger: "2.0"

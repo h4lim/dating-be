@@ -1,0 +1,94 @@
+{
+  "Subscribers": [
+    {
+      "FullName": "Tukul Arwana",
+      "Username": "tukul.arwana",
+      "Gender": "male",
+      "Age": 26,
+      "Email": "tukul.arwana@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "non_premium"
+    },
+    {
+      "FullName": "User Male 2",
+      "Username": "usermale2",
+      "Gender": "male",
+      "Age": 27,
+      "Email": "usermale2@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "non_premium"
+    },
+    {
+      "FullName": "User Male 3",
+      "Username": "usermale3",
+      "Gender": "male",
+      "Age": 28,
+      "Email": "usermale3@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "non_premium"
+    },
+    {
+      "FullName": "User Male 4",
+      "Username": "usermale4",
+      "Gender": "male",
+      "Age": 26,
+      "Email": "usermale4@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "non_premium"
+    },
+    {
+      "FullName": "User Male 5",
+      "Username": "usermale5",
+      "Gender": "male",
+      "Age": 27,
+      "Email": "usermale5@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "non_premium"
+    },
+    {
+      "FullName": "User Male 6",
+      "Username": "usermale6",
+      "Gender": "male",
+      "Age": 28,
+      "Email": "usermale6@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "non_premium"
+    },
+    {
+      "FullName": "User Male 7",
+      "Username": "usermale7",
+      "Gender": "male",
+      "Age": 28,
+      "Email": "usermale7@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "non_premium"
+    },
+    {
+      "FullName": "User Male 8",
+      "Username": "usermale8",
+      "Gender": "male",
+      "Age": 28,
+      "Email": "usermale8@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "non_premium"
+    },
+    {
+      "FullName": "User Male 9",
+      "Username": "usermale9",
+      "Gender": "male",
+      "Age": 28,
+      "Email": "usermale9@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "non_premium"
+    },
+    {
+      "FullName": "User Male 10",
+      "Username": "usermale10",
+      "Gender": "male",
+      "Age": 28,
+      "Email": "usermale10@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "non_premium"
+    }
+  ]
+}

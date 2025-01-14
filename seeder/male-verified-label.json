@@ -1,0 +1,94 @@
+{
+  "Subscribers": [
+    {
+      "FullName": "User male_verified_label 1",
+      "Username": "usermale_verified_label1",
+      "Gender": "male",
+      "Age": 26,
+      "Email": "usermale_verified_label1@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "verified_label"
+    },
+    {
+      "FullName": "User male_verified_label 2",
+      "Username": "usermale_verified_label2",
+      "Gender": "male",
+      "Age": 27,
+      "Email": "usermale_verified_label2@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "verified_label"
+    },
+    {
+      "FullName": "User male_verified_label 3",
+      "Username": "usermale_verified_label3",
+      "Gender": "male",
+      "Age": 28,
+      "Email": "usermale_verified_label3@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "verified_label"
+    },
+    {
+      "FullName": "User male_verified_label 4",
+      "Username": "usermale_verified_label4",
+      "Gender": "male",
+      "Age": 26,
+      "Email": "usermale_verified_label4@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "verified_label"
+    },
+    {
+      "FullName": "User male_verified_label 5",
+      "Username": "usermale_verified_label5",
+      "Gender": "male",
+      "Age": 27,
+      "Email": "usermale_verified_label5@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "verified_label"
+    },
+    {
+      "FullName": "User male_verified_label 6",
+      "Username": "usermale_verified_label6",
+      "Gender": "male",
+      "Age": 28,
+      "Email": "usermale_verified_label6@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "verified_label"
+    },
+    {
+      "FullName": "User male_verified_label 7",
+      "Username": "usermale_verified_label7",
+      "Gender": "male",
+      "Age": 28,
+      "Email": "usermale_verified_label7@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "verified_label"
+    },
+    {
+      "FullName": "User male_verified_label 8",
+      "Username": "usermale_verified_label8",
+      "Gender": "male",
+      "Age": 28,
+      "Email": "usermale_verified_label8@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "verified_label"
+    },
+    {
+      "FullName": "User male_verified_label 9",
+      "Username": "usermale_verified_label9",
+      "Gender": "male",
+      "Age": 28,
+      "Email": "usermale_verified_label9@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "verified_label"
+    },
+    {
+      "FullName": "User male_verified_label 10",
+      "Username": "usermale_verified_label10",
+      "Gender": "male",
+      "Age": 28,
+      "Email": "usermale_verified_label10@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "verified_label"
+    }
+  ]
+}

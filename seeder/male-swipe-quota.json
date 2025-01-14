@@ -1,0 +1,94 @@
+{
+  "Subscribers": [
+    {
+      "FullName": "User male_swipe_quota 1",
+      "Username": "usermale_swipe_quota1",
+      "Gender": "male",
+      "Age": 26,
+      "Email": "usermale_swipe_quota1@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "swipe_quota"
+    },
+    {
+      "FullName": "User male_swipe_quota 2",
+      "Username": "usermale_swipe_quota2",
+      "Gender": "male",
+      "Age": 27,
+      "Email": "usermale_swipe_quota2@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "swipe_quota"
+    },
+    {
+      "FullName": "User male_swipe_quota 3",
+      "Username": "usermale_swipe_quota3",
+      "Gender": "male",
+      "Age": 28,
+      "Email": "usermale_swipe_quota3@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "swipe_quota"
+    },
+    {
+      "FullName": "User male_swipe_quota 4",
+      "Username": "usermale_swipe_quota4",
+      "Gender": "male",
+      "Age": 26,
+      "Email": "usermale_swipe_quota4@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "swipe_quota"
+    },
+    {
+      "FullName": "User male_swipe_quota 5",
+      "Username": "usermale_swipe_quota5",
+      "Gender": "male",
+      "Age": 27,
+      "Email": "usermale_swipe_quota5@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "swipe_quota"
+    },
+    {
+      "FullName": "User male_swipe_quota 6",
+      "Username": "usermale_swipe_quota6",
+      "Gender": "male",
+      "Age": 28,
+      "Email": "usermale_swipe_quota6@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "swipe_quota"
+    },
+    {
+      "FullName": "User male_swipe_quota 7",
+      "Username": "usermale_swipe_quota7",
+      "Gender": "male",
+      "Age": 28,
+      "Email": "usermale_swipe_quota7@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "swipe_quota"
+    },
+    {
+      "FullName": "User male_swipe_quota 8",
+      "Username": "usermale_swipe_quota8",
+      "Gender": "male",
+      "Age": 28,
+      "Email": "usermale_swipe_quota8@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "swipe_quota"
+    },
+    {
+      "FullName": "User male_swipe_quota 9",
+      "Username": "usermale_swipe_quota9",
+      "Gender": "male",
+      "Age": 28,
+      "Email": "usermale_swipe_quota9@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "swipe_quota"
+    },
+    {
+      "FullName": "User male_swipe_quota 10",
+      "Username": "usermale_swipe_quota10",
+      "Gender": "male",
+      "Age": 28,
+      "Email": "usermale_swipe_quota10@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "swipe_quota"
+    }
+  ]
+}

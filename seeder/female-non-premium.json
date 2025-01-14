@@ -1,0 +1,94 @@
+{
+  "Subscribers": [
+    {
+      "FullName": "User female 1",
+      "Username": "userfemale1",
+      "Gender": "female",
+      "Age": 26,
+      "Email": "userfemale1@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "non_premium"
+    },
+    {
+      "FullName": "User female 2",
+      "Username": "userfemale2",
+      "Gender": "female",
+      "Age": 27,
+      "Email": "userfemale2@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "non_premium"
+    },
+    {
+      "FullName": "User female 3",
+      "Username": "userfemale3",
+      "Gender": "female",
+      "Age": 28,
+      "Email": "userfemale3@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "non_premium"
+    },
+    {
+      "FullName": "User female 4",
+      "Username": "userfemale4",
+      "Gender": "female",
+      "Age": 26,
+      "Email": "userfemale4@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "non_premium"
+    },
+    {
+      "FullName": "User female 5",
+      "Username": "userfemale5",
+      "Gender": "female",
+      "Age": 27,
+      "Email": "userfemale5@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "non_premium"
+    },
+    {
+      "FullName": "User female 6",
+      "Username": "userfemale6",
+      "Gender": "female",
+      "Age": 28,
+      "Email": "userfemale6@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "non_premium"
+    },
+    {
+      "FullName": "User female 7",
+      "Username": "userfemale7",
+      "Gender": "female",
+      "Age": 28,
+      "Email": "userfemale7@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "non_premium"
+    },
+    {
+      "FullName": "User female 8",
+      "Username": "userfemale8",
+      "Gender": "female",
+      "Age": 28,
+      "Email": "userfemale8@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "non_premium"
+    },
+    {
+      "FullName": "User female 9",
+      "Username": "userfemale9",
+      "Gender": "female",
+      "Age": 28,
+      "Email": "userfemale9@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "non_premium"
+    },
+    {
+      "FullName": "User female 10",
+      "Username": "userfemale10",
+      "Gender": "female",
+      "Age": 28,
+      "Email": "userfemale10@example.com",
+      "Password": "securepassword",
+      "PremiumPackage": "non_premium"
+    }
+  ]
+}

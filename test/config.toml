@@ -1,0 +1,43 @@
+[server]
+mode = "local"
+port = "8888"
+debug = true
+http_timeout = 100
+message_json = "messages.json"
+service_name = "dating apps api"
+
+[local]
+jwt_timeout = 1000
+
+swagger_host = "localhost:8888"
+swagger_schemes = "http"
+swagger_basePath = "api/v1"
+
+db_driver = "mysql"
+db_host = "localhost"
+db_port = "3306"
+db_username = "root"
+db_password = "root"
+db_name = "dating_apps_local"
+
+redis_host = "localhost"
+redis_port = "6379"
+redis_password = ""
+
+[docker]
+jwt_timeout = 1000
+
+swagger_host = "localhost:8888"
+swagger_schemes = "http"
+swagger_basePath = "api/v1"
+
+db_driver = "mysql"
+db_host = "db"
+db_port = "3306"
+db_username = "root"
+db_password = "root"
+db_name = "dating_apps_local"
+
+redis_host = "redis"
+redis_port = "6379"
+redis_password = ""
