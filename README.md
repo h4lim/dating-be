@@ -1,6 +1,6 @@
 # Dating Backend
 
-This repository contains the backend code for a dating application. It is designed to handle user management, matchmaking, and other core functionalities.
+This repository contains the backend code for a dating application. It is designed to handle user signup, login, and swipe functionality.
 
 ## Table of Contents
 
@@ -86,6 +86,3 @@ and typing go test ./... -v
 2. Each step in the flow is logged with its duration for performance tracking and debugging.
 3. You can see the log folder in folder log
 ```
-
-# dating-be
-# dating-be
