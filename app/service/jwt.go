@@ -20,12 +20,12 @@ func NewJwtService(response common.Response) contract.IJwtService {
 	return jwtServiceContext{response: response}
 }
 
-func (j jwtServiceContext) GetToken(driverId string, password string) (*string, common.Response) {
+func (j jwtServiceContext) GetToken(username string, password string) (*string, common.Response) {
 
 	jwtTimeOut := common.ConfigInt["jwt_timeout"]
 	expirationTime := time.Second * time.Duration(jwtTimeOut)
 	claims := jwt.MapClaims{
-		"username": driverId + ":" + password,
+		"username": username + ":" + password,
 		"exp":      expirationTime,
 	}
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
