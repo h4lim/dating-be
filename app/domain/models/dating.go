@@ -31,7 +31,7 @@ type Subscriber struct {
 
 type UserView struct {
 	gorm.Model
-	UserID    uint   `gorm:"not null"` // The user viewing the profile
-	ProfileID uint   `gorm:"not null"` // The profile being viewed
-	Swiped    string `db:"swiped"`
+	UserID    uint   `gorm:"not null"`
+	ProfileID uint   `gorm:"not null;uniqueIndex:user_profile_unique"`
+	Swiped    string `gorm:"not null"`
 }

@@ -6,6 +6,7 @@ import (
 	"dating-be/app/helper"
 	"dating-be/common"
 	"fmt"
+	"gorm.io/gorm/clause"
 	"net/http"
 )
 
@@ -63,12 +64,14 @@ func (d datingRepositoryContext) FindSubscriberByUsernameOrEmail(username string
 
 func (d datingRepositoryContext) CreateUserView(data models.UserView) common.Response {
 
-	if err := common.GormDB.Create(&data).Error; err != nil {
+	if err := common.GormDB.Debug().Clauses(clause.OnConflict{
+		Columns:   []clause.Column{{Name: "user_id"}, {Name: "profile_id"}},
+		DoUpdates: clause.AssignmentColumns([]string{"swiped"}),
+	}).Create(&data).Error; err != nil {
 		return helper.GeneralError(d.response, err, common.Tracer())
 	}
 
-	return d.response.SetSuccess(common.Tracer(),
-		common.HttpResponse{HttpCode: http.StatusOK, Code: "0", Data: data})
+	return d.response.SetSuccess(common.Tracer(), common.HttpResponse{Code: "0"})
 }
 
 func (d datingRepositoryContext) FindSubscriberIn(viewedProfiles []string, gender string, page int) ([]models.Subscriber, common.Response) {

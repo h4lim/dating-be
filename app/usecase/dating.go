@@ -130,13 +130,13 @@ func (i iDatingUseCaseContext) Swipe(request types.RequestSwipe) ([]types.Respon
 	}
 
 	swipeService := service.NewSwipeService(i.response)
-	if request.IsFirstView {
+	/*	if request.IsFirstView {
 		data, httpResponse := swipeService.FirstViewProfile(subscriber.ID, string(subscriber.Gender))
 		if httpResponse.IsError() {
 			return []types.ResponseSwipe{}, httpResponse
 		}
 		return data, helper.Success(i.response, common.Tracer(), data)
-	}
+	}*/
 
 	var action models.Swiped = "like"
 	if !request.RightSwipe {

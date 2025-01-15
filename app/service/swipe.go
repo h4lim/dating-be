@@ -29,7 +29,6 @@ func (s swipeServiceContext) SwipeHandler(userId, profileId uint, premiumPackage
 	if common.RedisClient.Exists(bgContext, quotaKey).Val() == 0 {
 		common.RedisClient.Set(bgContext, quotaKey, 10, 24*time.Hour)
 	}
-	viewedProfilesKey := fmt.Sprintf("user:%d:viewed_profiles:%s", profileId, time.Now().Format("2006-01-02"))
 
 	if premiumPackage != models.SwipeQuota {
 		quota, err := common.RedisClient.Get(bgContext, quotaKey).Int()
@@ -42,7 +41,6 @@ func (s swipeServiceContext) SwipeHandler(userId, profileId uint, premiumPackage
 		}
 		common.RedisClient.Decr(bgContext, quotaKey)
 	}
-	common.RedisClient.SAdd(bgContext, viewedProfilesKey, profileId)
 
 	return helper.Success(s.response, common.Tracer(), nil)
 }
@@ -50,11 +48,16 @@ func (s swipeServiceContext) SwipeHandler(userId, profileId uint, premiumPackage
 func (s swipeServiceContext) FindProfiles(userId, profileId uint, gender string, action models.Swiped) ([]types.ResponseSwipe, common.Response) {
 
 	dateKey := time.Now().Format("2006-01-02")
-	viewedProfilesKey := fmt.Sprintf("user:%d:viewed_profiles:%s", profileId, dateKey)
+	viewedProfilesKey := fmt.Sprintf("user:%d:viewed_profiles:%s", userId, dateKey)
 	bgContext := context.Background()
-	viewedProfiles := common.RedisClient.SMembers(bgContext, viewedProfilesKey).Val()
-
 	strUserId := strconv.Itoa(int(userId))
+
+	viewedProfiles := common.RedisClient.SMembers(bgContext, viewedProfilesKey).Val()
+	if viewedProfiles == nil {
+		viewedProfiles = append(viewedProfiles, strUserId)
+		common.RedisClient.SAdd(bgContext, viewedProfilesKey, profileId)
+	}
+
 	page, err := common.RedisClient.Get(bgContext, strUserId).Int()
 	if err != nil {
 		return []types.ResponseSwipe{}, helper.GeneralError(s.response, err, common.Tracer())
@@ -65,6 +68,7 @@ func (s swipeServiceContext) FindProfiles(userId, profileId uint, gender string,
 	if httpResponse.IsError() {
 		return []types.ResponseSwipe{}, httpResponse
 	}
+	common.RedisClient.SAdd(bgContext, viewedProfilesKey, profileId)
 
 	if len(subscribers) == 0 {
 		if err := common.RedisClient.Set(context.Background(), strUserId, 1, 0).Err(); err != nil {
@@ -98,6 +102,7 @@ func (s swipeServiceContext) FindProfiles(userId, profileId uint, gender string,
 			Email:          subscriber.Email,
 			PremiumPackage: string(subscriber.PremiumPackage),
 		}
+		common.RedisClient.SAdd(bgContext, viewedProfilesKey, response.ProfileId)
 		responses = append(responses, response)
 	}
 
